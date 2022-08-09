@@ -1,0 +1,11 @@
+{
+    "cSpell.words": [
+        "formik",
+        "webp"
+    ],
+    "cSpell.enableFiletypes": [
+        "!javascriptreact",
+        "!typescriptreact"
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
+}
