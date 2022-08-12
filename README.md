@@ -1,4 +1,4 @@
-# RUNgram
+# rungram
 
 This is an instagram clone built with React-native, Formik, Firebase & Yup
 
