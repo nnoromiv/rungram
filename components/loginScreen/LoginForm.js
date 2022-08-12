@@ -1,33 +1,63 @@
-import { View, Text, TextInput, StyleSheet, TouchableOpacity, Pressable } from 'react-native'
-import React, { useState } from 'react'
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, Pressable, Alert } from 'react-native'
+import React from 'react'
 import * as Yup from 'yup'
 import {Formik} from 'formik'
 import Validator from 'email-validator'
+import '../../firebase/firebase'
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
+
 
 const LoginForm = ( {navigation} ) => {
-    const [email, setEmail] = useState('')
     const LoginFormSchema = Yup.object().shape({
         email: Yup.string().email().required(' Incorrect '),
         password: Yup.string().required().min(8, 'Password invalid')
     })
+
+    const auth = getAuth()
+
+    const onLogin = async( email, password) => {
+      try {
+        await signInWithEmailAndPassword(auth, email, password)
+        console.log('Firebase login successful', email, password)
+      } catch (error) {
+        error.message === 'Firebase: The password is invalid or the user does not have a password. (auth/wrong-password).' 
+        || error.message === 'Firebase: There is no user record corresponding to this identifier. The user may have been deleted. (auth/user-not-found).'
+        && Alert.alert(
+          'Invalid email/password',
+          'Try Sign up',
+         [ {
+            text: 'Ok',
+            onPress: () => console.log('Ok'),
+            style: 'cancel'
+          },
+          {
+            text: 'Sign up',
+            onPress: () => navigation.push('SignUpScreen'),
+          },
+        ]
+        )
+      }
+    }
   return (
     <Formik
     initialValues={{ email: '', password: ''}}
-    onSubmit={(values) => console.log(values)}
+    onSubmit={(values) => 
+    onLogin(values.email, values.password)
+    }
     validationSchema={LoginFormSchema}
     validateOnMount={true}
     >
     {({handleChange, handleBlur, handleSubmit, values, isValid}) => (
     <>
       <TextInput
-      placeholder='Phone number, Username or Email' placeholderTextColor='white'
+      placeholder='Email' placeholderTextColor='white'
       autoCapitalize='none' keyboardType='email-address' textContentType='emailAddress'
       autoFocus={false} autoComplete={'email'}
       onChangeText={handleChange('email')}
       onBlur={handleBlur('email')}
       value={values.email}
       style={[ styles.nameInputField, {
-        borderBottomColor: values.email.length < 1 || Validator.validate(values.email) ? 'white' : 'red'
+        borderBottomColor: 1 > values.email.length || values.email.length <= 2 || Validator.validate(values.email) ? 'white' : 'red'
       }]}
       />
      <TextInput
@@ -39,7 +69,7 @@ const LoginForm = ( {navigation} ) => {
       onBlur={handleBlur('password')}
       value={values.password}
       style={[ styles.passwordInputField, {
-        borderBottomColor: 1 > values.password.length || values.password.length <= 8  ? 'white' : 'red'
+        borderBottomColor:  Validator.validate(values.password)  ? 'red' : 'white'
       }]}
       />
       <TouchableOpacity style={{ alignItems: 'flex-end', marginBottom: 30}}>

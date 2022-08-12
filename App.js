@@ -1,13 +1,11 @@
 import React from 'react';
-import SignedInStack from './navigation';
-import HomeScreen from './screens/HomeScreen';
-import NewPostScreen from './screens/NewPostScreen';
+import { LogBox } from 'react-native';
+import AuthNavigation from './AuthNavigation';
 
 const App = () => {
+  LogBox.ignoreLogs(['AsyncStorage has been extracted from react-native core and will be removed in a future release.'])
   return (
-    // <HomeScreen />
-    // <NewPostScreen />
-    <SignedInStack />
+    <AuthNavigation />
   );
 };
 export default App;

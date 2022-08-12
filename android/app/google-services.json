@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "796465626860",
+    "project_id": "rn-gram",
+    "storage_bucket": "rn-gram.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796465626860:android:78c87dc3814751e61e2fc9",
+        "android_client_info": {
+          "package_name": "com.igclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796465626860-upcmlugllbgs7ntufvrui3fe151mj3md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsRUBj_Hu1P4frZNKdJQ8lxwF-sw5h074"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "796465626860-upcmlugllbgs7ntufvrui3fe151mj3md.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
