@@ -24,8 +24,8 @@ export const bottomTabIcons = [
     },
     {
         name: 'Profile',
-        active: 'https://images.generated.photos/18twiOQ0KNpANuKhvd_BmDimhEXv3lAOSt-uCM8j2NY/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvNzkzMjVl/ODgtMmIxMC00OGMy/LTkxNGMtYzc0ZTFj/M2U3ODBiLmpwZw.jpg',
-        inactive: 'https://images.generated.photos/18twiOQ0KNpANuKhvd_BmDimhEXv3lAOSt-uCM8j2NY/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvNzkzMjVl/ODgtMmIxMC00OGMy/LTkxNGMtYzc0ZTFj/M2U3ODBiLmpwZw.jpg'
+        active: 'https://media.istockphoto.com/photos/african-megacity-lagos-nigeria-picture-id1320231994?k=20&m=1320231994&s=612x612&w=0&h=qE_Q7MSjh0L7uRxJmb1yZqIPqlZ3rBWqamoqJdQmz4c=',
+        inactive: 'https://media.istockphoto.com/photos/african-megacity-lagos-nigeria-picture-id1320231994?k=20&m=1320231994&s=612x612&w=0&h=qE_Q7MSjh0L7uRxJmb1yZqIPqlZ3rBWqamoqJdQmz4c='
     },
 ]
 

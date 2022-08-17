@@ -5,7 +5,7 @@ import {Formik} from 'formik'
 import Validator from 'email-validator'
 import '../../firebase/firebase'
 import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth'
-import { addDoc, collection, doc, setDoc } from 'firebase/firestore'
+import { collection, doc, setDoc } from 'firebase/firestore'
 import { db } from '../../firebase/firebase'
 
 
@@ -41,7 +41,7 @@ const SignUpForm = ({navigation}) => {
               )
             )
       } catch (error) {
-        console.log(error.message)
+        console.log(error)
       }
     }
     return (
