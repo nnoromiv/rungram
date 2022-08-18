@@ -18,7 +18,6 @@ const LoginForm = ( {navigation} ) => {
     const onLogin = async( email, password) => {
       try {
         await signInWithEmailAndPassword(auth, email, password)
-        console.log('Firebase login successful', email, password)
       } catch (error) {
         error.message === 'Firebase: The password is invalid or the user does not have a password. (auth/wrong-password).' 
         || error.message === 'Firebase: There is no user record corresponding to this identifier. The user may have been deleted. (auth/user-not-found).'

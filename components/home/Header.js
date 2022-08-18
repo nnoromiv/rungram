@@ -26,11 +26,11 @@ const Header = ({navigation}) => {
         uri: 'https://img.icons8.com/external-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto/60/ffffff/external-plus-multimedia-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto.png'
     }} />
     </TouchableOpacity>
-    <TouchableOpacity>
+    {/* <TouchableOpacity>
     <Image style={styles.icon} source={{
         uri: 'https://img.icons8.com/material-outlined/60/ffffff/filled-like.png'
     }} />
-    </TouchableOpacity>
+    </TouchableOpacity> */}
     <TouchableOpacity>
     <View style={styles.unreadBadge}>
         <Text style={styles.unreadBadgeText}>11</Text>
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         flexDirection: 'row',
-        marginHorizontal: 20,
+        marginHorizontal: 10,
     },
     logo : {
         width: 100,

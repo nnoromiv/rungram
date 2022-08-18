@@ -4,8 +4,8 @@ import { Divider } from './Post'
 export const bottomTabIcons = [
     {
         name: 'Home',
-        active: 'https://img.icons8.com/material-outlined/60/ffffff/home-filled.png',
-        inactive: 'https://img.icons8.com/puffy/500/ffffff/experimental-home-puffy.png'
+        active: 'https://img.icons8.com/material/60/ffffff/home.png',
+        inactive: 'https://img.icons8.com/material-outlined/500/ffffff/home.png'
     },
     {
         name: 'Search',
@@ -14,13 +14,13 @@ export const bottomTabIcons = [
     },
     {
         name: 'Reels',
-        active: 'https://img.icons8.com/ios-filled/50/ffffff/film-reel--v1.png',
-        inactive: 'https://img.icons8.com/ios/500/ffffff/film-reel--v1.png'
+        active: 'https://img.icons8.com/ios-filled/50/ffffff/instagram-reel.png',
+        inactive: 'https://img.icons8.com/ios/500/ffffff/instagram-reel.png'
     },
     {
-        name: 'Shop',
-        active: 'https://img.icons8.com/fluency-systems-filled/50/ffffff/shop.png',
-        inactive: 'https://img.icons8.com/fluency-systems-regular/500/ffffff/shop.png'
+        name: 'Activity',
+        active: 'https://img.icons8.com/material/60/ffffff/filled-like.png',
+        inactive: 'https://img.icons8.com/material-outlined/60/ffffff/filled-like.png'
     },
     {
         name: 'Profile',
@@ -59,7 +59,7 @@ const styles = StyleSheet.create ({
     wrapper: {
         position: 'absolute',
         width: '100%',
-        bottom: 0,
+        bottom: -10,
         zIndex: 999,
         backgroundColor: '#000000'
     },

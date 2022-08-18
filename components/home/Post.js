@@ -15,11 +15,11 @@ const postFooterIcons = [
     },
     {
         name: 'Comment',
-        imageUrl: 'https://img.icons8.com/fluency-systems-regular/64/ffffff/comments--v1.png',
+        imageUrl: 'https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/96/ffffff/external-comments-communication-royyan-wijaya-detailed-outline-royyan-wijaya.png',
     },
     {
         name: 'Share',
-        imageUrl: 'https://img.icons8.com/windows/64/ffffff/share-3.png',
+        imageUrl: 'https://img.icons8.com/fluency-systems-regular/48/ffffff/telegram-app.png',
     },
     {
         name: 'Save',
@@ -39,9 +39,7 @@ const Post = ({post}) => {
             ) : arrayRemove(
                 auth.currentUser.email
             )
-        }).then(() => {
-            console.log("Successful")
-        }).catch((error) => console.log(error.message))
+        })
     }
   return (
     <View style={{ marginBottom: 30 }}>
@@ -68,7 +66,7 @@ const PostHeader = ({ post }) => (
                 post.user
             }</Text>
         </View>
-        <Text style={{ color: 'white', fontWeight: '900', fontSize: 20}}>...</Text>
+        <Text style={{ color: 'white', fontWeight: '900', fontSize: 20, transform: [{ rotate: '270deg'}], marginRight: 10}}>...</Text>
     </View>
 )
 
@@ -186,8 +184,8 @@ const styles = StyleSheet.create({
         height: 33
     },
     shareIcon: {
-        transform: [{ rotate: '320deg'}],
-        marginTop: -3
+        transform: [{ rotate: '360deg'}],
+        marginTop: 0
     }
 })
 
